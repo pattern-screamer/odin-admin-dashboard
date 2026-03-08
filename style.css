@@ -1,0 +1,27 @@
+.container {
+  display: grid;
+  grid-template: 2fr 11fr / 2fr 5fr 2fr;
+  grid-template-areas: 
+  "nav header header"
+  "nav main main";
+}
+
+.header {
+  grid-area: header;
+}
+
+.nav {
+  grid-area: nav;
+}
+
+.main {
+  grid-area: main;
+}
+
+/* Create two classes: 'card' and 'lid'. Cards look like the cards in the design. The 'lid' class is there to add a yellow lid to the left of some cards. */
+
+/* Following code is nothing more than a debug rules, to be removed post-completion or by obsoletion. */
+
+.header, .nav, .main, div {
+  border: 2px solid black;
+}
