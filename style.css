@@ -28,6 +28,13 @@
   --header-bg-colour: #fff;
   --header-button-bg-colour: #3890d0;
   --header-button-text-colour: #fff;
+
+  --projects-bg-colour: #e2e7ef;
+
+  --card-bg-colour: #fff;
+  --card-content-colour: #636363;
+
+  --lid-colour: #eab341;
 }
 
 a {
@@ -63,6 +70,8 @@ ul {
   background-color: var(--header-bg-colour);
   padding: 0 2rem;
   font-weight: bold;
+  box-shadow: 0 4px 5px #0002;
+  z-index: 10;
 }
 
 .searchbar {
@@ -140,15 +149,56 @@ ul {
 
   display: grid;
   grid-template-columns: 5fr 2fr;
+  gap: 1rem;
+
+  background-color: var(--projects-bg-colour);
+  padding: 2rem 1rem;
 }
 
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
 
+.card {
+  background-color: var(--card-bg-colour);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 4px 4px 5px #0002;
+}
+
+.lid {
+  border-left: 8px solid var(--lid-colour);
+}
+
+.projects .card > h2 {
+  font-size: 1.2rem;
+}
+
+.projects .card > p {
+  color: var(--card-content-colour);
+}
+
+.projects .card {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+}
+
+.card ul {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: end;
+  gap: 1rem;
+  
+  padding: 1rem 0 0;
+}
 
 /* Create two classes: 'card' and 'lid'. Cards look like the cards in the design. The 'lid' class is there to add a yellow lid to the left of some cards. */
 /* Add icons to links using ::after pseudo-element*/
 
 /* Following code is nothing more than a debug rules, to be removed post-completion or by obsoletion. */
 
-.header, .nav, .main, div {
+/* .header, .nav, .main, div {
   border: 2px solid black;
-}
+} */
