@@ -155,6 +155,12 @@ ul {
   padding: 2rem 1rem;
 }
 
+.projects > h2,
+.announcements > h2,
+.trending > h2 {
+  margin-bottom: 0.5rem;
+}
+
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -192,6 +198,11 @@ ul {
   gap: 1rem;
   
   padding: 1rem 0 0;
+}
+
+.sidebar {
+  display: grid;
+  gap: 2rem;
 }
 
 /* Create two classes: 'card' and 'lid'. Cards look like the cards in the design. The 'lid' class is there to add a yellow lid to the left of some cards. */
