@@ -137,7 +137,12 @@ ul {
 
 .main {
   grid-area: main;
+
+  display: grid;
+  grid-template-columns: 5fr 2fr;
 }
+
+
 
 /* Create two classes: 'card' and 'lid'. Cards look like the cards in the design. The 'lid' class is there to add a yellow lid to the left of some cards. */
 /* Add icons to links using ::after pseudo-element*/
