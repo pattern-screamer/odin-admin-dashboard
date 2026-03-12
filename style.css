@@ -22,6 +22,11 @@
 :root {
   --sidebar-bg-colour: #3890d0;
   --sidebar-text-colour: #fff;
+
+  --searchfield-bg-colour: #e2e7ef;
+
+  --header-bg-colour: #fff;
+  --sidebar-button-colour: #3890d0;
 }
 
 a {
@@ -39,7 +44,7 @@ ul {
   font-family: Roboto;
 
   display: grid;
-  grid-template: 2fr 11fr / 2fr 5fr 2fr;
+  grid-template: min-content 1fr / 2fr 5fr 2fr;
   grid-template-areas: 
   "nav header header"
   "nav main main";
@@ -47,6 +52,44 @@ ul {
 
 .header {
   grid-area: header;
+
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: repeat(2, min-content);
+
+  background-color: var(--header-bg-colour);
+  padding: 1rem 2rem;
+  font-weight: bold;
+}
+
+.searchbar {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-auto-rows: min-content;
+  gap: 1rem;
+}
+
+.searchfield {
+  border: none;
+  border-radius: 16px;
+}
+
+.searchfield {
+  background-color: var(--searchfield-bg-colour);
+}
+
+.searchfield:active,
+.searchfield:focus {
+  border: none;
+}
+
+.greeting {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+}
+
+.hi-there::first-line {
+  font-size: 0.75rem;
 }
 
 .nav {
@@ -75,6 +118,7 @@ ul {
 }
 
 /* Create two classes: 'card' and 'lid'. Cards look like the cards in the design. The 'lid' class is there to add a yellow lid to the left of some cards. */
+/* Add icons to links using ::after pseudo-element*/
 
 /* Following code is nothing more than a debug rules, to be removed post-completion or by obsoletion. */
 
