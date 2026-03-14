@@ -35,6 +35,8 @@
   --card-content-colour: #636363;
 
   --lid-colour: #eab341;
+
+  --announcements-separator-colour: #d1d1d1;
 }
 
 a {
@@ -205,10 +207,14 @@ ul {
   gap: 2rem;
 }
 
-.announcements > .card > .div ~ .div,
-.trending > .card > .div ~ .div
+.announcements > .card > div ~ div
 {
-  
+  border-top: 2px solid var(--announcements-separator-colour);
+}
+
+.announcements > .card > div
+{
+  padding: 1rem;
 }
 
 /* Create two classes: 'card' and 'lid'. Cards look like the cards in the design. The 'lid' class is there to add a yellow lid to the left of some cards. */
