@@ -70,7 +70,7 @@ ul {
   gap: 1rem;
 
   background-color: var(--header-bg-colour);
-  padding: 0 2rem;
+  padding: 0 4rem;
   font-weight: bold;
   box-shadow: 0 4px 5px #0002;
   z-index: 10;
@@ -98,7 +98,8 @@ ul {
 
 .profile {
   display: grid;
-  grid-auto-flow: column;
+  grid-template-columns: repeat(3, max-content);
+  justify-self: end;
   gap: 1.5rem;
 }
 
@@ -113,8 +114,9 @@ ul {
 
 .create {
   display: grid;
-  grid-auto-flow: column;
-  justify-items: center;
+  grid-template-columns: repeat(3, max-content);
+  justify-self: end;
+  gap: 2rem;
 }
 
 .create button {
@@ -195,7 +197,7 @@ ul {
 
 .card ul {
   display: grid;
-  grid-auto-flow: column;
+  grid-template-columns: repeat(3, max-content);
   justify-content: end;
   gap: 1rem;
   
@@ -204,6 +206,7 @@ ul {
 
 .sidebar {
   display: grid;
+  grid-template-rows: repeat(2, max-content);
   gap: 2rem;
 }
 
@@ -215,6 +218,12 @@ ul {
 .announcements > .card > div
 {
   padding: 1rem;
+}
+
+.trending > .card > .user {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 1rem;
 }
 
 /* Create two classes: 'card' and 'lid'. Cards look like the cards in the design. The 'lid' class is there to add a yellow lid to the left of some cards. */
