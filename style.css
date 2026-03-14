@@ -1,20 +1,20 @@
 /* IMPORT ROBOTO FONT */
 @font-face {
-  font-family: 'Roboto';
-  src: url('./fonts/Roboto-Regular.woff2') format('woff2'),
-    url('./fonts/Roboto-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto-Italic.woff2') format('woff2'),
+        url('./fonts/Roboto-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('./fonts/Roboto-Italic.woff2') format('woff2'),
-    url('./fonts/Roboto-Italic.woff') format('woff');
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto-Regular.woff2') format('woff2'),
+        url('./fonts/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 /* VARIABLES AND GLOBAL STYLES */
@@ -203,6 +203,12 @@ ul {
 .sidebar {
   display: grid;
   gap: 2rem;
+}
+
+.announcements > .card > .div ~ .div,
+.trending > .card > .div ~ .div
+{
+  
 }
 
 /* Create two classes: 'card' and 'lid'. Cards look like the cards in the design. The 'lid' class is there to add a yellow lid to the left of some cards. */
