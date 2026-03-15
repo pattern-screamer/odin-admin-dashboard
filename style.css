@@ -42,6 +42,8 @@
 
   --anchor-hover-background-colour: #fff;
   --anchor-hover-colour: #000;
+  
+  --anchor-non-hover-colour: #fff;
 }
 
 a {
@@ -132,12 +134,18 @@ ul {
   gap: 2rem;
 }
 
-.create button {
-  border: none;
+.create a {
+  border: 3px solid var(--anchor-non-hover-colour);
   border-radius: 32px;
   background-color: var(--header-button-bg-colour);
   color: var(--header-button-text-colour);
   padding: 0.5rem 2rem;
+}
+
+.create a:hover {
+  color: var(--anchor-hover-colour);
+  border: 3px solid var(--anchor-hover-colour);
+  background-color: var(--anchor-hover-background-colour);
 }
 
 .nav {
