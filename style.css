@@ -37,6 +37,8 @@
   --lid-colour: #eab341;
 
   --announcements-separator-colour: #d1d1d1;
+
+  --trending-subtitle-colour: #636363;
 }
 
 a {
@@ -234,6 +236,10 @@ ul {
   grid-template-columns: repeat(2, max-content);
   align-items: center;
   gap: 1rem;
+}
+
+.trending .user-info p + p {
+  color: var(--trending-subtitle-colour);
 }
 
 /* Create two classes: 'card' and 'lid'. Cards look like the cards in the design. The 'lid' class is there to add a yellow lid to the left of some cards. */
