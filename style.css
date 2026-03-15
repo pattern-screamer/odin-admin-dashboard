@@ -39,6 +39,9 @@
   --announcements-separator-colour: #d1d1d1;
 
   --trending-subtitle-colour: #636363;
+
+  --anchor-hover-background-colour: #fff;
+  --anchor-hover-colour: #000;
 }
 
 a {
@@ -146,7 +149,6 @@ ul {
 
   background-color: var(--sidebar-bg-colour);
   color: var(--sidebar-text-colour);
-  padding: 1rem;
 }
 
 .nav ul {
@@ -154,9 +156,43 @@ ul {
   padding: 0;
 }
 
-.nav ul li {
+.nav ul li a {
   font-size: 1.2rem;
-  padding: 0.25rem;
+  padding: 0.25rem 0.25rem 0.25rem 2rem;
+}
+
+.nav a {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 1rem;
+  transition: background-color 0.5s;
+}
+
+.nav a:hover {
+  background-color: var(--anchor-hover-background-colour);
+  color: var(--anchor-hover-colour);
+}
+
+.nav h1 a img {
+  display: block;
+  width: 4rem;
+}
+
+.nav a img {
+  display: block;
+  width: 2rem;
+}
+
+.nav a img {
+  filter: invert(1);
+  transition: filter 0.5s;
+}
+
+.nav a:hover img {
+  filter: brightness(0);
 }
 
 .main {
