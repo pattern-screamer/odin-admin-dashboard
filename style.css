@@ -164,7 +164,6 @@ ul {
   gap: 1rem;
 
   background-color: var(--projects-bg-colour);
-  padding: 2rem 1rem;
   padding: 2rem calc(1rem + 8px) 3.5rem 1rem;
 }
 
