@@ -70,7 +70,7 @@ ul {
   gap: 1rem;
 
   background-color: var(--header-bg-colour);
-  padding: 0 4rem;
+  padding: 1rem 4rem;
   font-weight: bold;
   box-shadow: 0 4px 5px #0002;
   z-index: 10;
@@ -79,6 +79,7 @@ ul {
 .searchbar {
   display: grid;
   grid-template-columns: min-content 1fr;
+  align-items: center;
   gap: 1rem;
 }
 
@@ -100,22 +101,29 @@ ul {
   display: grid;
   grid-template-columns: repeat(3, max-content);
   justify-self: end;
+  align-items: center;
   gap: 1.5rem;
 }
 
 .greeting {
   display: grid;
   grid-template-columns: min-content 1fr;
+  align-items: center;
 }
 
-.hi-there::first-line {
+.hi-there > p:first-child {
   font-size: 0.75rem;
+}
+
+.name {
+  font-size: 1.25rem;
 }
 
 .create {
   display: grid;
   grid-template-columns: repeat(3, max-content);
   justify-self: end;
+  align-items: center;
   gap: 2rem;
 }
 
