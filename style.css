@@ -149,6 +149,7 @@ ul {
 
 .nav ul {
   font-weight: bold;
+  padding: 0;
 }
 
 .nav ul li {
