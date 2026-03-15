@@ -61,7 +61,7 @@ ul {
   font-family: Roboto;
 
   display: grid;
-  grid-template: min-content 1fr / 2fr 5fr 2fr;
+  grid-template: min-content 1fr / minmax(300px, 2fr) 5fr 2fr;
   grid-template-areas: 
   "nav header header"
   "nav main main";
@@ -90,9 +90,16 @@ ul {
   gap: 1rem;
 }
 
+.search {
+  content: url("./icons/magnify.svg");
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
 .searchfield {
   border: none;
   border-radius: 16px;
+  padding: 0.25rem 1rem;
 }
 
 .searchfield {
@@ -112,10 +119,36 @@ ul {
   gap: 1.5rem;
 }
 
+.notification-bell {
+  content: url("./icons/bell-ring-outline.svg");
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.profile-upper-right {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  align-items: center;
+  gap: 2rem;
+}
+
+.morgan-freeman.small {
+  display: block;
+  height: 50px;
+  border-radius: 32px;
+}
+
 .greeting {
   display: grid;
-  grid-template-columns: min-content 1fr;
+  grid-template-columns: max-content 1fr;
   align-items: center;
+  gap: 1.5rem;
+}
+
+.morgan-freeman.large {
+  display: block;
+  height: 75px;
+  border-radius: 64px;
 }
 
 .hi-there > p:first-child {
@@ -222,7 +255,7 @@ ul {
 
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 1.5rem;
 }
 
@@ -254,9 +287,15 @@ ul {
   display: grid;
   grid-template-columns: repeat(3, max-content);
   justify-content: end;
-  gap: 1rem;
+  gap: 2rem;
   
-  padding: 1rem 0 0;
+  padding: 1.5rem 0.5rem 0.5rem;
+}
+
+.card.lid a {
+  display: block;
+  height: 1.75rem;
+  width: 1.75rem;
 }
 
 .sidebar {
@@ -284,6 +323,16 @@ ul {
 
 .trending .user-info p + p {
   color: var(--trending-subtitle-colour);
+}
+
+.user img {
+  height: 60px;
+  width: 60px;
+  border-radius: 32px;
+}
+
+.user ~ .user {
+  margin-top: 1rem;
 }
 
 /* Create two classes: 'card' and 'lid'. Cards look like the cards in the design. The 'lid' class is there to add a yellow lid to the left of some cards. */
